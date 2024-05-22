@@ -26,7 +26,7 @@ public class videito : MonoBehaviour
     {
         if (veri != null && veri.getCubo() > 0)
         {
-            int tuki = veri.getCubo() - 1;
+            int tuki = veri.getCubo();
             Debug.Log("tuki es:"+tuki);
             if (tuki >= 0 && tuki < videoC.Length)
             {
@@ -37,6 +37,10 @@ public class videito : MonoBehaviour
             {
                 Debug.LogWarning("Índice de cubo fuera de rango.");
             }
+        }
+        if(veri.getCubo()==0){
+            videos.clip = videoC[0];
+            videos.Play();
         }
     }
 }

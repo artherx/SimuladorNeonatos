@@ -25,4 +25,12 @@ public class Veri : MonoBehaviour
             Debug.Log("es "+ other.name+" numero: "+cubo);
         }
     }
+    private void OnTriggerExit(Collider other) {
+        if (other.CompareTag("coli"))
+        {
+            Debug.Log("Ha salido");
+            cubo = 0;
+            Debug.Log("es "+ other.name+" numero: "+cubo);
+        }
+    }
 }
